@@ -1,4 +1,4 @@
-# crowdar
+# crowdAR
 
 Enter this site to start the experience:
 
