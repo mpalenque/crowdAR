@@ -9,9 +9,11 @@ you can open landing on mobile, but its better to open it on desktop so you can 
 ![ar](https://github.com/user-attachments/assets/e611a992-3771-4e49-af0e-5964f578b0bb)
 
 Opening AR will open a new tab, scan the QR with your phone and will open a web.
+![arr](https://github.com/user-attachments/assets/f7fe70e8-0b9d-4027-90d7-0cb3296520da)
+
 
 Give permission to access camera and scan the logo to experience AR.
-
+![asdd](https://github.com/user-attachments/assets/13c60e1f-b6dd-4447-884e-1e0bcd6637f4)
 
 For crowdAR, try to lower the brightness and avoid reflections on the screen:
 
