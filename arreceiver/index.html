@@ -22,7 +22,7 @@
         height: 12px;
         background-color: rgb(0, 0, 0);
         animation: fall linear infinite;
-        z-index: 5; /* Asegúrate de que el confetti esté en un nivel inferior */
+        z-index: 5; /* Ensure confetti is at a lower level */
       }
       .confetti.red-rectangle {
         width: 50px;
@@ -31,13 +31,13 @@
       }
 
       #qr-image {
-        width: 25%; /* Reduce el tamaño a la mitad */
+        width: 45%; /* Reduce size by half */
         height: auto;
         position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        z-index: 10; /* Asegúrate de que la imagen esté en un nivel superior */
+        z-index: 10; /* Ensure image is at a higher level */
       }
 
       @keyframes fall {
@@ -49,28 +49,28 @@
         }
       }
 
-      /* Estilo para la imagen QR en la esquina inferior izquierda */
+      /* Style for the QR image in the bottom left corner */
       .qr-bottom-left {
         position: fixed;
         bottom: 10px;
         left: 10px;
-        width: 120px; /* Ajusta el tamaño a un tercio del original */
+        width: 120px; /* Adjust size to one-third of the original */
         height: auto;
         z-index: 10;
       }
 
-      /* Estilo para el texto al lado de la imagen QR */
+      /* Style for the text next to the QR image */
       .qr-text {
         position: fixed;
         bottom: 10px;
-        left: 270px; /* Ajusta la posición según el tamaño de la imagen */
+        left: 270px; /* Adjust position according to image size */
         color: white;
         font-family: Arial, sans-serif;
         font-size: 30px;
         z-index: 100;
       }
 
-      /* Estilo para el texto de track count en la esquina superior derecha */
+      /* Style for the track count text in the top right corner */
       #trackCountDisplay {
         position: absolute;
         top: 10px;
