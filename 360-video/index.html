@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>360 Video</title>
+    <meta name="description" content="360 Video — A-Frame">
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <script>
+      // play-on-click.js
+      AFRAME.registerComponent('play-on-click', {
+        init: function () {
+          this.onClick = this.onClick.bind(this);
+        },
+        play: function () {
+          window.addEventListener('click', this.onClick);
+        },
+        pause: function () {
+          window.removeEventListener('click', this.onClick);
+        },
+        onClick: function (evt) {
+          var video = this.el.getAttribute('src');
+          if (!video) { return; }
+          var videoEl = document.querySelector(video);
+          if (!videoEl) { return; }
+          videoEl.play();
+        }
+      });
+
+      // hide-on-play.js
+      AFRAME.registerComponent('hide-on-play', {
+        schema: {type: 'selector'},
+        init: function () {
+          this.onPlay = this.onPlay.bind(this);
+          this.onPause = this.onPause.bind(this);
+        },
+        play: function () {
+          if (this.data) {
+            this.data.addEventListener('play', this.onPlay);
+            this.data.addEventListener('pause', this.onPause);
+          }
+        },
+        pause: function () {
+          if (this.data) {
+            this.data.removeEventListener('play', this.onPlay);
+            this.data.removeEventListener('pause', this.onPause);
+          }
+        },
+        onPlay: function (evt) {
+          this.el.object3D.visible = false;
+        },
+        onPause: function (evt) {
+          this.el.object3D.visible = true;
+        }
+      });
+    </script>
+  </head>
+  <body>
+    <a-scene>
+      <a-assets>
+        <!--
+        SOURCE
+        Author: Bitmovin
+        URL:    https://bitmovin.com/demos/vr-360
+        -->
+        <video id="video"
+               loop
+               crossorigin="anonymous"
+               playsinline webkit-playsinline
+               src="2.mp4">
+        </video>
+      </a-assets>
+      <a-videosphere
+        rotation="0 -90 0" src="#video"
+        play-on-click>
+      </a-videosphere>
+
+      <a-camera>
+        <a-entity
+          position="0 0 -1.5"
+          text="align:center;
+                width:6;
+                wrapCount:100;
+                color: white;
+                value: Click or tap to start video"
+          hide-on-play="#video">
+        </a-entity>
+      </a-camera>
+    </a-scene>
+  </body>
+</html>
