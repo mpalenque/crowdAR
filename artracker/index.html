@@ -8,9 +8,9 @@
     <script>
       AFRAME.registerComponent('morph-sequence', {
         schema: {
-          from: {type: 'string', default: 'frame_0002'},
-          to: {type: 'string', default: 'frame_0300'},
-          dur: {type: 'number', default: 5000}
+          from: {type: 'string', default: 'frame_0001'},
+          to: {type: 'string', default: 'frame_0178'},
+          dur: {type: 'number', default: 4272}
         },
         init: function () {
           this.startTime = null;
@@ -66,7 +66,7 @@
         <a-asset-item id="animationspace" src="animation.glb"></a-asset-item>
       </a-assets>
       <a-marker type="pattern" url="marker.patt" id="pattMarker">
-        <a-entity gltf-model="#animationspace" position="0 0 -0" rotation="0 0 0" morph-sequence="from: frame_0001; to: frame_0300; dur: 5000"></a-entity>
+        <a-entity gltf-model="#animationspace" position="0 0 -0" rotation="0 0 0" morph-sequence="from: frame_0001; to: frame_0178; dur: 4272"></a-entity>
       </a-marker>
       <a-entity light="type: directional; color: #ffffff; intensity: 2" position="1 1 1"></a-entity>
       <a-box position="0 0.5 0" rotation="0 45 0" color="#4CC3D9"></a-box>
