@@ -31,7 +31,7 @@
       }
 
       #qr-image {
-        width: 35%; /* Reduce size by half */
+        width: 25%; /* Reduce size by half */
         height: auto;
         position: absolute;
         top: 50%;
@@ -132,6 +132,12 @@
             removeConfetti();
           }
         }
+      });
+
+      // Handle audio ended event
+      audioElement.addEventListener('ended', function () {
+        document.body.style.backgroundColor = 'black';
+        removeConfetti();
       });
 
       function createConfetti() {
