@@ -1,4 +1,4 @@
-# crowdar
+# crowdAR
 
 Enter this site to start the experience:
 
@@ -28,7 +28,7 @@ better
 best
 ![3](https://github.com/user-attachments/assets/a3f1611c-2a2e-4edb-b72b-be0c91a7b642)
 
-
+If colors dont appear, refresh desktop site and mobile.
 
 
 
